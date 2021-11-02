@@ -18,7 +18,7 @@ input {
     border: 2px solid rgb(255, 255, 255);
     border-radius: 4px;
     background-color: #00000024;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 17px;
 
 }
@@ -31,7 +31,7 @@ input:focus {
 }
 
 #profileButton  {
-    background-color: #ff0000;
+    background-color: #ffffff;
     border: none;
     color: rgb(0, 0, 0);
     padding: 20px 0px;
