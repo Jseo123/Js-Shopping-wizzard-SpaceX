@@ -1,31 +1,74 @@
 //const elements
 var ImgFirst = document.querySelector(".ImgFirst");
 var minitureImg = document.querySelector(".mySlides");
-var changeColorsImg = document.querySelector(".cohetes");
-const changeSelection2 = document.querySelector(".selection2")
+var changePhoto1 = document.querySelector("#photo1");
+var changePhoto2 = document.querySelector("#photo2");
+var changePhoto3 = document.querySelector("#photo3");
+var changePhoto4 = document.querySelector("#photo4");
+const changeSelection2 = document.querySelector(".selection2");
 
 
 // events
-minitureImg.addEventListener("click", change);
-changeColorsImg.addEventListener("click", changeColors);
-changeSelection2.addEventListener("click", selector2)
+minitureImg.addEventListener("click", changeMiniature);
+changePhoto1.addEventListener("click", changeImg1);
+changePhoto2.addEventListener("click", changeImg2);
+changePhoto3.addEventListener("click", changeImg3);
+changePhoto4.addEventListener("click", changeImg4);
+// changeSelection2.addEventListener("click", selector2)
 
 // change miniture to ImgFirst
-function change (e) {
+function changeMiniature (e) {
   ImgFirst.src = e.target.src ;
+  hide();
+  switch (e.target.id) {
+    case "first":
+      changePhoto1.classList.remove("hide");
+      changePhoto1.classList.add("show");
+      break;
+      case "second":
+        changePhoto2.classList.remove("hide");
+        changePhoto2.classList.add("show");
+      break;
+      case "thrid":
+        changePhoto3.classList.remove("hide");
+        changePhoto3.classList.add("show");
+      break;
+      case "fourth":
+        changePhoto4.classList.remove("hide");
+        changePhoto4.classList.add("show");
+      break;
+  }
 }
 
+function hide() {
+  changePhoto1.classList.remove("show");
+  changePhoto2.classList.remove("show");
+  changePhoto3.classList.remove("show");
+  changePhoto4.classList.remove("show");
+  changePhoto1.classList.add("hide");
+  changePhoto2.classList.add("hide");
+  changePhoto3.classList.add("hide");
+  changePhoto4.classList.add("hide");
+}
 
 // change color ImgFirst
-function changeColors (e) {
+function changeImg1 (e) {
   ImgFirst.src = e.target.src;
 }
-
-function selector2 () {
-  while (changeColorsImg.firstChild) {
-    changeColorsImg.removeChild(changeColorsImg.childNodes[0]);
-  }
-  const img1 = createElement("img")
-  img1.setAttribute("src","guidance images\assets\2_falcon_heavy.jpg")
-  changeColorsImg.appendChild(img1);
+function changeImg2 (e) {
+  ImgFirst.src = e.target.src;
 }
+function changeImg3 (e) {
+  ImgFirst.src = e.target.src;
+}
+function changeImg4 (e) {
+  ImgFirst.src = e.target.src;
+}
+// function selector2 () {
+//   while (changeColorsImg.firstChild) {
+//     changeColorsImg.removeChild(changeColorsImg.childNodes[0]);
+//   }
+//   const img1 = document.createElement("img");
+//   img1.src = "images\img1.webp";
+//   document.getElementById("cohetes").appendChild(img1);
+  // changeColorsImg.appendChild(img1);
