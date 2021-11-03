@@ -49,11 +49,11 @@ let price = {
 };
 
 let order = {
-  product = "",
-  productPrice = "",
-  sponsor = "",
-  sponsorPrice = "",
-  image = ""
+  product: "",
+  productPrice: "",
+  sponsor: "",
+  sponsorPrice: "",
+  image: ""
 }
 
 function contentChange1() {
