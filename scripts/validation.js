@@ -1,5 +1,3 @@
-
-
 //validation for the profile form
 function validateProfile() {
   let errors = {
