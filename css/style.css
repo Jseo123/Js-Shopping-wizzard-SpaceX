@@ -10,7 +10,7 @@ body {
 .topnav {
   overflow: hidden;
   text-align: center;
-  background: black;
+  background: #001a54a1;
   margin-top: 5px;
   box-shadow: rgb(0 0 0 / 47%) 0px 6px 7px 0px;
 }
@@ -26,8 +26,8 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: aliceblue;
+  color: #011135; 
 }
 
 .topnav a.active {
@@ -41,6 +41,7 @@ body {
 
 .menu {
   display: inline-flex;
+  padding: 10px 0px;
 }
 
 @media screen and (max-width: 600px) {
