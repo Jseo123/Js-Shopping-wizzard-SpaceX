@@ -1,4 +1,5 @@
 const mainProductbtn = document.querySelector(".btn1");
+const btn2 = document.querySelector(".btn2")
 const usernameToAdress = document.querySelector(".username-to-adress-button")
 const homepage = document.querySelector(".homepage")
 const product1 = document.querySelector(".main-carrusel")
@@ -8,7 +9,7 @@ const username = document.querySelector(".username")
 const adress = document.querySelector(".adress")
 const delivery = document.querySelector(".delivery")
 const mainProductPress = mainProductbtn.addEventListener("click", contentChange1);
-const usernameToAdressPress = usernameToAdress.addEventListener("click", changeToAdress)
+const formularyPress = btn2.addEventListener("click", changeToUsername)
 var ImgFirst = document.querySelector(".ImgFirst");
 var minitureImg = document.querySelector(".mySlides");
 var changePhoto1 = document.querySelector("#photo1");
@@ -23,9 +24,9 @@ homepage.style.display ="none";
   return;
 }
 
-function changeToAdress() {
-  username.style.display = "none";
-  adress.style.display = "block"
+function changeToUsername() {
+  product1.style.display = "none";
+  username.style.display = "block"
 }
 
 
