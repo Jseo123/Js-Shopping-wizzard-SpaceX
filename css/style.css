@@ -115,7 +115,7 @@ h1 {
 
 /*ocultar y mostrar la imagen de la col-derecha*/
 .optionChange {
-  width: 100px
+  width: 200px
 }
 .hide {
 opacity: 0;
