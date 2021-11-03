@@ -9,14 +9,13 @@
 .SpaceX img {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 12%;
+  margin-top: 20%;
   width: 562px;
 }
 
 .main-product-button {
   display: flex;
   margin-top: 2%;
-  
 }
 
 .main-product-button button:hover {
@@ -36,4 +35,5 @@
   border: solid white 1px;
   color: white;
   padding: 15px 50px;
+  cursor: pointer;
 }
