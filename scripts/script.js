@@ -1,20 +1,11 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
-<<<<<<< HEAD
-const btn4 = document.querySelector(".username-to-adress-button")
-const cartBtn = document.querySelector(".addToCart")
-const removeOne = document.querySelector(".remove-one")
-const counter = document.querySelector(".counter")
-const spaceX = document.querySelector(".navlogo");
-const shopping = document.querySelector(".shopping")
-=======
 const cartBtn = document.querySelector(".addToCart");
 const removeOne = document.querySelector(".remove-one");
 const counter = document.querySelector(".counter");
 const spaceX = document.querySelector(".navlogo");
 const shopping = document.querySelector(".shopping");
 const usernameToAdress = document.querySelector(".username-to-adress-button");
->>>>>>> 78479deec78424648411b39b2156ac85a77b7ee1
 const homepage = document.querySelector(".homepage");
 const product1 = document.querySelector(".main-carrusel");
 const product2 = document.querySelector(".product2");
@@ -67,29 +58,6 @@ let order = {
 
 function contentChange1() {
   product1.style.display = "flex";
-<<<<<<< HEAD
-homepage.style.display ="none";
-username.style.display = "none";
-adressSection.style.display="none"
-  return;
-}
-
-
-
-function changeToStep4() {
-  username.style.display = "none";
-  product1.style.display = "none";
-  homepage.style.display ="none";
-  adressSection.style.display="flex";
-  return;
-}
-
-function backToHome() {
-  product1.style.display = "none";
-  username.style.display = "none";
-  homepage.style.display ="block";
-  adressSection.style.display="none"
-=======
   homepage.style.display = "none";
   return;
 }
@@ -98,7 +66,6 @@ function backToHome() {
   product1.style.display = "none";
   username.style.display = "none";
   homepage.style.display = "block";
->>>>>>> 78479deec78424648411b39b2156ac85a77b7ee1
   return;
 }
 
