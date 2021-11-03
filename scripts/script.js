@@ -14,7 +14,6 @@ const username = document.querySelector(".username");
 const adress = document.querySelector(".adress");
 const delivery = document.querySelector(".delivery");
 const mainProductPress = mainProductbtn.addEventListener("click", contentChange1);
-const formularyPress = btn2.addEventListener("click", changeToUsername);
 const spaceXclick = spaceX.addEventListener("click", backToHome);
 var ImgFirst = document.querySelector(".ImgFirst");
 var minitureImg = document.querySelector(".mySlides");
@@ -36,7 +35,7 @@ let rocket = {
 
 let price = {
   falcon9: 100000,
-  falconHeavy: 200000,
+  heavy: 200000,
   dragon: 50000,
   bfr: 500000,
   amazon: 8000,
@@ -45,6 +44,8 @@ let price = {
   meta: 20
 }
 
+let pedido = [];
+
 
 function contentChange1() {
   product1.style.display = "flex";
@@ -52,11 +53,6 @@ homepage.style.display ="none";
   return;
 }
 
-function changeToUsername() {
-  product1.style.display = "none";
-  username.style.display = "block";
-  return;
-}
 
 function backToHome() {
   product1.style.display = "none";
@@ -140,6 +136,13 @@ function oneLess() {
 
 function addSelection() {
   if (currentRocket != null) {
-    
+    let array = currentRocket.split("-")
+    array.forEach(element => {
+      pedido.push([element,price[element]]);
+    });
+    console.log(pedido);
+    product1.style.display = "none";
+  username.style.display = "block";
+  return;
   }
 }
