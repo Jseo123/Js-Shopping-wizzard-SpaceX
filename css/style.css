@@ -6,6 +6,10 @@ body {
     background-size: cover;
 }
 
+.navlogo:hover {
+cursor: pointer;
+}
+
 .home-nav {
     display: flex;
     background: rgba(0, 0, 0, 0.795);
