@@ -1,5 +1,8 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
+const cartBtn = document.querySelector(".addToCart")
+const removeOne = document.querySelector(".remove-one")
+const counter = document.querySelector(".counter")
 const spaceX = document.querySelector(".navlogo");
 const usernameToAdress = document.querySelector(".username-to-adress-button");
 const homepage = document.querySelector(".homepage");
@@ -19,9 +22,10 @@ var changePhoto2 = document.querySelector("#photo2");
 var changePhoto3 = document.querySelector("#photo3");
 var changePhoto4 = document.querySelector("#photo4");
 const changeSelection2 = document.querySelector(".selection2");
+const cartPress = cartBtn.addEventListener("click", addToCar)
+const remove = removeOne.addEventListener("click", oneLess)
 
-let productChoise = "";
-let colorChoise = "";
+let choice = "";
 
 console.log(spaceX)
 
@@ -101,6 +105,16 @@ function changeImg3 (e) {
 }
 function changeImg4 (e) {
   ImgFirst.src = e.target.src;
+}
+
+function addToCar() {
+  counter.innerHTML = parseInt(counter.innerHTML) + 1;
+}
+
+function oneLess() {
+  if (counter.innerHTML > 0){
+  counter.innerHTML = parseInt(counter.innerHTML) - 1;
+}
 }
 // function selector2 () {
 //   while (changeColorsImg.firstChild) {
