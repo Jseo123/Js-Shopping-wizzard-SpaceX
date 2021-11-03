@@ -15,19 +15,6 @@ body {
   box-shadow: rgb(0 0 0 / 47%) 0px 6px 7px 0px;
 }
 
-<<<<<<< HEAD
-.navlogo:hover {
-cursor: pointer;
-}
-
-.home-nav {
-    display: flex;
-    background: rgba(0, 0, 0, 0.795);
-    color: rgba(255, 255, 255, 0.877);
-    margin-top: 0%;
-    height: 70%;
-    padding: 15px;
-=======
 .topnav a {
   float: left;
   display: block;
@@ -36,7 +23,6 @@ cursor: pointer;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
->>>>>>> username
 }
 
 .topnav a:hover {

@@ -42,7 +42,6 @@ function backToHome() {
   username.style.display = "none";
   homepage.style.display ="block";
   return;
-  
 }
 
 
