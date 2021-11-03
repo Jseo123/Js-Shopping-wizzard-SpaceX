@@ -10,7 +10,9 @@ body {
     display: flex;
     background: rgba(0, 0, 0, 0.795);
     color: rgba(255, 255, 255, 0.877);
-    margin-top: -0.5%;
+    margin-top: 0%;
+    height: 70%;
+    padding: 15px;
 }
 
 .home-nav img {
@@ -20,7 +22,7 @@ body {
 
 .home-nav ul{
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
     width: 40%;
     margin-left: 10%;
 }
@@ -38,3 +40,37 @@ body {
     display: none;
 }
 
+/* Cuerpo **/
+
+.main-carrusel {
+  display: flex;
+}
+.columnL {
+width: 80%;
+background-color: rgb(255, 255, 255);
+}
+.ImgFirst{
+  width: 100%;
+}
+.columnR {
+width: 20%;
+margin-left: 0px;
+background-color: rgb(248, 248, 248);
+}
+.mySlides img{
+  width: 24.4%;
+  height: auto;
+  padding: 1px;
+  object-fit: cover;
+}
+.optionChange {
+  width: 500px;
+}
+.hide {
+opacity: 0;
+display: none;
+}
+.show {
+  opacity: 1;
+  display: block;
+}
