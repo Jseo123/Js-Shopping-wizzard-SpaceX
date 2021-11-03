@@ -25,15 +25,8 @@
   background-color: white;
   border: solid black 1px;
   color: black;
-<<<<<<< HEAD
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  cursor: pointer;
-=======
   padding: 15px 50px;
->>>>>>> username
+  cursor: pointer;
 }
 
 .main-product-button button {
