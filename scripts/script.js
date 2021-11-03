@@ -1,7 +1,7 @@
 const mainProductbtn = document.querySelector(".btn1");
 const usernameToAdress = document.querySelector(".username-to-adress-button")
 const homepage = document.querySelector(".homepage")
-const product1 = document.querySelector(".product1")
+const product1 = document.querySelector(".main-carrusel")
 const product2 = document.querySelector(".product2")
 const product3 = document.querySelector(".product3")
 const username = document.querySelector(".username")
@@ -18,7 +18,7 @@ var changePhoto4 = document.querySelector("#photo4");
 const changeSelection2 = document.querySelector(".selection2");
 
 function contentChange1() {
-  username.style.display = "block";
+  product1.style.display = "flex";
 homepage.style.display ="none";
   return;
 }
