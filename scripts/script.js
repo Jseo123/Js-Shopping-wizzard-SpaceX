@@ -4,6 +4,7 @@ const cartBtn = document.querySelector(".addToCart")
 const removeOne = document.querySelector(".remove-one")
 const counter = document.querySelector(".counter")
 const spaceX = document.querySelector(".navlogo");
+const shopping = document.querySelector(".shopping")
 const usernameToAdress = document.querySelector(".username-to-adress-button");
 const homepage = document.querySelector(".homepage");
 const product1 = document.querySelector(".main-carrusel");
@@ -22,12 +23,28 @@ var changePhoto2 = document.querySelector("#photo2");
 var changePhoto3 = document.querySelector("#photo3");
 var changePhoto4 = document.querySelector("#photo4");
 const changeSelection2 = document.querySelector(".selection2");
-const cartPress = cartBtn.addEventListener("click", addToCar)
-const remove = removeOne.addEventListener("click", oneLess)
+const cartPress = cartBtn.addEventListener("click", addToCar);
+const remove = removeOne.addEventListener("click", oneLess);
+const shoppingPress = shopping.addEventListener("click", addSelection);
 
-let choice = "";
+let currentRocket = null;
 
-console.log(spaceX)
+let rocket = {
+  modele: "",
+  sponsor: "",
+}
+
+let price = {
+  falcon9: 100000,
+  falconHeavy: 200000,
+  dragon: 50000,
+  bfr: 500000,
+  amazon: 8000,
+  assembler:9000,
+  google: 2000,
+  meta: 20
+}
+
 
 function contentChange1() {
   product1.style.display = "flex";
@@ -80,6 +97,7 @@ function changeMiniature (e) {
       break;
   }
 }
+
 // function to hide colunm R
 function hide() {
   changePhoto1.classList.remove("show");
@@ -95,15 +113,19 @@ function hide() {
 // change color ImgFirst
 function changeImg1 (e) {
   ImgFirst.src = e.target.src;
+  currentRocket = e.target.getAttribute("value")
 }
 function changeImg2 (e) {
   ImgFirst.src = e.target.src;
+  currentRocket = e.target.getAttribute("value")
 }
 function changeImg3 (e) {
   ImgFirst.src = e.target.src;
+  currentRocket = e.target.getAttribute("value")
 }
 function changeImg4 (e) {
   ImgFirst.src = e.target.src;
+  currentRocket = e.target.getAttribute("value")
 }
 
 function addToCar() {
@@ -115,11 +137,9 @@ function oneLess() {
   counter.innerHTML = parseInt(counter.innerHTML) - 1;
 }
 }
-// function selector2 () {
-//   while (changeColorsImg.firstChild) {
-//     changeColorsImg.removeChild(changeColorsImg.childNodes[0]);
-//   }
-//   const img1 = document.createElement("img");
-//   img1.src = "images\img1.webp";
-//   document.getElementById("cohetes").appendChild(img1);
-  // changeColorsImg.appendChild(img1);
+
+function addSelection() {
+  if (currentRocket != null) {
+    
+  }
+}
