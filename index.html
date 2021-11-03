@@ -117,7 +117,75 @@
         </form>
       </section>
 
-      <section id="step3 address"><!-- Direccion de envio --></section>
+      <section id="step3 address">
+        <!-- Direccion de envio -->
+        <form name="addressForm" id="addressForm">
+          <label for="firstName">First name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+            maxlength="20"
+          />
+          <label for="lastName">Last name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            maxlength="20"
+          />
+          <label for="birthday">Birthday:</label>
+          <input type="date" name="birthday" id="birthday" required />
+          <label for="address1">Address 1:</label>
+          <input
+            type="text"
+            name="address1"
+            id="address1"
+            required
+            maxlength="50"
+          />
+          <label for="address2">Address 2:</label>
+          <input type="text" name="address2" id="address2" maxlength="50" />
+          <label for="postalCode">Postal Code:</label>
+          <input
+            type="number"
+            name="postalCode"
+            id="postalCode"
+            minlength="5"
+            maxlength="5"
+            required
+          />
+          <label for="country">Country:</label>
+          <select name="country" id="country">
+            <option value="spain">Spain</option>
+            <option value="andorra">Andorra</option>
+            <option value="france">France</option>
+            <option value="germany">Germany</option>
+            <option value="greece">Greece</option>
+          </select>
+          <label for="countryCode">Country code:</label>
+          <select name="countryCode" id="countryCode">
+            <option value="34">34 ESP</option>
+            <option value="376">376 AND</option>
+            <option value="33">33 FRA</option>
+            <option value="49">49 DEU</option>
+            <option value="30">30 GRC</option>
+          </select>
+          <label for="phoneNumber">Phone number:</label>
+          <input
+            type="tel"
+            name="phoneNumber"
+            id="phoneNumber"
+            required
+            maxlength="9"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+          />
+          <label for="regularAddress"> Is this your regular address?</label>
+          <input type="checkbox" name="regularAddress" id="regularAddress" />
+        </form>
+      </section>
 
       <section id="step4 delivery"><!-- Modo de envio --></section>
     </div>
