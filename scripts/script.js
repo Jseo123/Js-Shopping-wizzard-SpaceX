@@ -1,14 +1,17 @@
 const mainProductbtn = document.querySelector(".btn1");
-const usernameToAdress = document.querySelector(".username-to-adress-button")
-const homepage = document.querySelector(".homepage")
-const product1 = document.querySelector(".main-carrusel")
-const product2 = document.querySelector(".product2")
-const product3 = document.querySelector(".product3")
-const username = document.querySelector(".username")
-const adress = document.querySelector(".adress")
-const delivery = document.querySelector(".delivery")
+const btn2 = document.querySelector(".btn2");
+const spaceX = document.querySelector(".navlogo");
+const usernameToAdress = document.querySelector(".username-to-adress-button");
+const homepage = document.querySelector(".homepage");
+const product1 = document.querySelector(".main-carrusel");
+const product2 = document.querySelector(".product2");
+const product3 = document.querySelector(".product3");
+const username = document.querySelector(".username");
+const adress = document.querySelector(".adress");
+const delivery = document.querySelector(".delivery");
 const mainProductPress = mainProductbtn.addEventListener("click", contentChange1);
-const usernameToAdressPress = usernameToAdress.addEventListener("click", changeToAdress)
+const formularyPress = btn2.addEventListener("click", changeToUsername);
+const spaceXclick = spaceX.addEventListener("click", backToHome);
 var ImgFirst = document.querySelector(".ImgFirst");
 var minitureImg = document.querySelector(".mySlides");
 var changePhoto1 = document.querySelector("#photo1");
@@ -17,17 +20,30 @@ var changePhoto3 = document.querySelector("#photo3");
 var changePhoto4 = document.querySelector("#photo4");
 const changeSelection2 = document.querySelector(".selection2");
 
+let productChoise = "";
+let colorChoise = "";
+
+console.log(spaceX)
+
 function contentChange1() {
   product1.style.display = "flex";
 homepage.style.display ="none";
   return;
 }
 
-function changeToAdress() {
-  username.style.display = "none";
-  adress.style.display = "block"
+function changeToUsername() {
+  product1.style.display = "none";
+  username.style.display = "block";
+  return;
 }
 
+function backToHome() {
+  product1.style.display = "none";
+  username.style.display = "none";
+  homepage.style.display ="block";
+  return;
+  
+}
 
 
 // events
