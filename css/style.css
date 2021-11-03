@@ -43,7 +43,10 @@ body {
 /* Cuerpo **/
 
 .main-carrusel {
-  display: flex;
+  display: none;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .columnL {
 width: 80%;
