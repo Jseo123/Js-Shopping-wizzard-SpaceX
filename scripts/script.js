@@ -20,6 +20,9 @@ var changePhoto3 = document.querySelector("#photo3");
 var changePhoto4 = document.querySelector("#photo4");
 const changeSelection2 = document.querySelector(".selection2");
 
+let productChoise = "";
+let colorChoise = "";
+
 console.log(spaceX)
 
 function contentChange1() {
