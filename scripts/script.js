@@ -61,7 +61,7 @@ function changeMiniature (e) {
       break;
   }
 }
-
+// function to hide colunm R
 function hide() {
   changePhoto1.classList.remove("show");
   changePhoto2.classList.remove("show");
