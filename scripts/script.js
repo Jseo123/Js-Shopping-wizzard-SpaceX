@@ -1,17 +1,17 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
+const btn4 = document.querySelector(".username-to-adress-button")
 const cartBtn = document.querySelector(".addToCart")
 const removeOne = document.querySelector(".remove-one")
 const counter = document.querySelector(".counter")
 const spaceX = document.querySelector(".navlogo");
 const shopping = document.querySelector(".shopping")
-const usernameToAdress = document.querySelector(".username-to-adress-button");
 const homepage = document.querySelector(".homepage");
 const product1 = document.querySelector(".main-carrusel");
 const product2 = document.querySelector(".product2");
 const product3 = document.querySelector(".product3");
 const username = document.querySelector(".username");
-const adress = document.querySelector(".adress");
+const adressSection = document.querySelector(".section3");
 const delivery = document.querySelector(".delivery");
 const mainProductPress = mainProductbtn.addEventListener("click", contentChange1);
 const spaceXclick = spaceX.addEventListener("click", backToHome);
@@ -25,6 +25,7 @@ const changeSelection2 = document.querySelector(".selection2");
 const cartPress = cartBtn.addEventListener("click", addToCar);
 const remove = removeOne.addEventListener("click", oneLess);
 const shoppingPress = shopping.addEventListener("click", addSelection);
+const nextPress = btn4.addEventListener("click", changeToStep4);
 
 let currentRocket = null;
 
@@ -50,17 +51,28 @@ let pedido = [];
 function contentChange1() {
   product1.style.display = "flex";
 homepage.style.display ="none";
+username.style.display = "none";
+adressSection.style.display="none"
   return;
 }
 
+
+
+function changeToStep4() {
+  username.style.display = "none";
+  product1.style.display = "none";
+  homepage.style.display ="none";
+  adressSection.style.display="flex";
+  return;
+}
 
 function backToHome() {
   product1.style.display = "none";
   username.style.display = "none";
   homepage.style.display ="block";
+  adressSection.style.display="none"
   return;
 }
-
 
 // events
 minitureImg.addEventListener("click", changeMiniature);
