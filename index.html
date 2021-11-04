@@ -187,7 +187,25 @@
         </form>
       </section>
 
-      <section id="step4 delivery"><!-- Modo de envio --></section>
+      <section id="step4 delivery">
+        <!-- Modo de envio -->
+        <form name="shippingForm" id="shippingForm">
+          <input type="radio" name="shipping" id="freeShipping" value="free" required>
+          <label for="freeShipping">Free shipment (1month)</label>
+          <input type="radio" name="shipping" id="fastShpping" value="fast">
+          <label for="fastShipping">Fast shipment (1 week)</label>
+          <input type="radio" name="shipping" id="expressShipping" value="express">
+          <label for="expressShipping">Express shipment (24h)</label>
+          <input type="checkbox" name="gift" id="gift">
+          <label for="gift">Is it a gift?</label>
+          <label for="giftMessage">Gift Message</label>
+          <textarea name="giftMessage" id="giftMessage" cols="30" rows="10"></textarea>
+          <label for="giftWrapper">Gift wrapper</label>
+          <input type="file"
+       id="giftWrapper" name="giftWrapper"
+       accept="image/png, image/jpeg">
+        </form>
+      </section>
     </div>
     <footer><ul><li><p>More info</p></li><li><p>All rights reserved</p></li><li><p>Social network links</p></li></ul></footer>
   </body>
