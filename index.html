@@ -192,11 +192,15 @@
         <form name="shippingForm" id="shippingForm">
           <input type="radio" name="shipping" id="freeShipping" value="free" required>
           <label for="freeShipping">Free shipment (1month)</label>
-          <input type="radio" name="shipping" id="fastShpping" value="fast">
+          <input type="radio" name="shipping" id="fastShipping" value="fast">
           <label for="fastShipping">Fast shipment (1 week)</label>
           <input type="radio" name="shipping" id="expressShipping" value="express">
           <label for="expressShipping">Express shipment (24h)</label>
           <input type="checkbox" name="gift" id="gift">
+          <div class="deliveryDate">
+            <h5>Estimated delivery Date:</h5>
+            <p></p>
+          </div>
           <label for="gift">Is it a gift?</label>
           <label for="giftMessage">Gift Message</label>
           <textarea name="giftMessage" id="giftMessage" cols="30" rows="10"></textarea>

@@ -1,10 +1,10 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
-const cartBtn = document.querySelector(".addToCart")
-const removeOne = document.querySelector(".remove-one")
-const counter = document.querySelector(".counter")
+const cartBtn = document.querySelector(".addToCart");
+const removeOne = document.querySelector(".remove-one");
+const counter = document.querySelector(".counter");
 const spaceX = document.querySelector(".navlogo");
-const shopping = document.querySelector(".shopping")
+const shopping = document.querySelector(".shopping");
 const usernameToAdress = document.querySelector(".username-to-adress-button");
 const homepage = document.querySelector(".homepage");
 const product1 = document.querySelector(".main-carrusel");
@@ -13,7 +13,10 @@ const product3 = document.querySelector(".product3");
 const username = document.querySelector(".username");
 const adress = document.querySelector(".adress");
 const delivery = document.querySelector(".delivery");
-const mainProductPress = mainProductbtn.addEventListener("click", contentChange1);
+const mainProductPress = mainProductbtn.addEventListener(
+  "click",
+  contentChange1
+);
 const spaceXclick = spaceX.addEventListener("click", backToHome);
 var ImgFirst = document.querySelector(".ImgFirst");
 var minitureImg = document.querySelector(".mySlides");
@@ -26,12 +29,20 @@ const cartPress = cartBtn.addEventListener("click", addToCar);
 const remove = removeOne.addEventListener("click", oneLess);
 const shoppingPress = shopping.addEventListener("click", addSelection);
 
+//radius buttons
+const freeShipping = document.querySelector("#freeShipping");
+const fastShipping = document.querySelector("#fastShipping");
+const expressShipping = document.querySelector("#expressShipping");
+freeShipping.addEventListener("click", shippingDate);
+fastShipping.addEventListener("click", shippingDate);
+expressShipping.addEventListener("click", shippingDate);
+
 let currentRocket = null;
 
 let rocket = {
   modele: "",
   sponsor: "",
-}
+};
 
 let price = {
   falcon9: 100000,
@@ -39,28 +50,25 @@ let price = {
   dragon: 50000,
   bfr: 500000,
   amazon: 8000,
-  assembler:9000,
+  assembler: 9000,
   google: 2000,
-  meta: 20
-}
+  meta: 20,
+};
 
 let pedido = [];
 
-
 function contentChange1() {
   product1.style.display = "flex";
-homepage.style.display ="none";
+  homepage.style.display = "none";
   return;
 }
-
 
 function backToHome() {
   product1.style.display = "none";
   username.style.display = "none";
-  homepage.style.display ="block";
+  homepage.style.display = "block";
   return;
 }
-
 
 // events
 minitureImg.addEventListener("click", changeMiniature);
@@ -71,25 +79,25 @@ changePhoto4.addEventListener("click", changeImg4);
 // changeSelection2.addEventListener("click", selector2)
 
 // change miniture to ImgFirst
-function changeMiniature (e) {
-  ImgFirst.src = e.target.src ;
+function changeMiniature(e) {
+  ImgFirst.src = e.target.src;
   hide();
   switch (e.target.id) {
     case "first":
       changePhoto1.classList.remove("hide");
       changePhoto1.classList.add("show");
       break;
-      case "second":
-        changePhoto2.classList.remove("hide");
-        changePhoto2.classList.add("show");
+    case "second":
+      changePhoto2.classList.remove("hide");
+      changePhoto2.classList.add("show");
       break;
-      case "thrid":
-        changePhoto3.classList.remove("hide");
-        changePhoto3.classList.add("show");
+    case "thrid":
+      changePhoto3.classList.remove("hide");
+      changePhoto3.classList.add("show");
       break;
-      case "fourth":
-        changePhoto4.classList.remove("hide");
-        changePhoto4.classList.add("show");
+    case "fourth":
+      changePhoto4.classList.remove("hide");
+      changePhoto4.classList.add("show");
       break;
   }
 }
@@ -107,21 +115,21 @@ function hide() {
 }
 
 // change color ImgFirst
-function changeImg1 (e) {
+function changeImg1(e) {
   ImgFirst.src = e.target.src;
-  currentRocket = e.target.getAttribute("value")
+  currentRocket = e.target.getAttribute("value");
 }
-function changeImg2 (e) {
+function changeImg2(e) {
   ImgFirst.src = e.target.src;
-  currentRocket = e.target.getAttribute("value")
+  currentRocket = e.target.getAttribute("value");
 }
-function changeImg3 (e) {
+function changeImg3(e) {
   ImgFirst.src = e.target.src;
-  currentRocket = e.target.getAttribute("value")
+  currentRocket = e.target.getAttribute("value");
 }
-function changeImg4 (e) {
+function changeImg4(e) {
   ImgFirst.src = e.target.src;
-  currentRocket = e.target.getAttribute("value")
+  currentRocket = e.target.getAttribute("value");
 }
 
 function addToCar() {
@@ -129,20 +137,61 @@ function addToCar() {
 }
 
 function oneLess() {
-  if (counter.innerHTML > 0){
-  counter.innerHTML = parseInt(counter.innerHTML) - 1;
-}
+  if (counter.innerHTML > 0) {
+    counter.innerHTML = parseInt(counter.innerHTML) - 1;
+  }
 }
 
 function addSelection() {
   if (currentRocket != null) {
-    let array = currentRocket.split("-")
-    array.forEach(element => {
-      pedido.push([element,price[element]]);
+    let array = currentRocket.split("-");
+    array.forEach((element) => {
+      pedido.push([element, price[element]]);
     });
     console.log(pedido);
     product1.style.display = "none";
-  username.style.display = "block";
-  return;
+    username.style.display = "block";
+    return;
   }
+}
+
+//Shipping date calculation
+function shippingDate(e) {
+  const deliveryElement = document.querySelector(".deliveryDate p");
+  let deliveryTime = "";
+  let todaysDate = new Date();
+  let minDelivery = new Date();
+  let maxDelivery = new Date();
+  let days;
+  switch (e.target.value) {
+    case "free":
+      days = 1;
+      break;
+    case "fast":
+      days = 7;
+      break;
+    case "express":
+      days = 30;
+      break;
+  }
+  minDelivery.setDate(todaysDate.getDate() + days);
+  maxDelivery.setDate(minDelivery.getDate() + days + 1);
+  console.log(todaysDate);
+  var dateOptions = {
+    timeZone: "Europe/Madrid",
+    hour12: false,
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  };
+  deliveryTime =
+    "Between " +
+    minDelivery.toLocaleString("en-US", dateOptions) +
+    " and " +
+    maxDelivery.toLocaleString();
+  deliveryElement.innerHTML = deliveryTime;
+  console.log(deliveryTime);
 }
