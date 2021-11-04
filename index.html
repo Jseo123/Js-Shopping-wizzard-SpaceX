@@ -202,14 +202,20 @@
       </section>
       <section class="deliverypage" id="step4 delivery"> <!-- Modo de envio -->
         <form name="shippingForm" id="shippingForm">
+          <div class="fShipping">
           <input type="radio" name="shipping" id="freeShipping" value="free" required>
           <label for="freeShipping">Free shipment (1month)</label>
+        </div>
+        <div class="fShipping">
           <input type="radio" name="shipping" id="fastShipping" value="fast">
           <label for="fastShipping">Fast shipment (1 week)</label>
+        </div>
+        <div class="fShipping">
           <input type="radio" name="shipping" id="expressShipping" value="express">
           <label for="expressShipping">Express shipment (24h): 2000</label>
-          <input type="checkbox" name="gift" id="gift">
-          <div class="deliveryDate">
+        </div>
+        <div class="deliveryDate">
+            <input type="checkbox" name="gift" id="gift">
             <h5>Estimated delivery Date:</h5>
             <p></p>
           </div>
