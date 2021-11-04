@@ -144,7 +144,7 @@ h2 {
 }
 
 
-/*ocultar y mostrar la imagen de la col-derecha*/
+/*ocultar y mostrar la imagen productos de la col-derecha*/
 
 .optionChange {
   max-width: 100%;
@@ -295,25 +295,6 @@ footer ul li p {
 
 .hide-container {
   display: none;
-}
-.todelivery {
-display: flex;
-flex-direction: column;
-width: 30%;
-text-decoration: none;
-background-color: #ffffff;
-border: none;
-color: rgb(0, 0, 0);
-font-size: 26px;
-padding: 5px 0px;
-/* background-color: #ffffff;
-border: none;
-color: rgb(0, 0, 0);
-padding: 20px 0px;
-width: 70%;
-text-decoration: none;
-margin: 20px 0px; */
-cursor: pointer;
 }
 
 .thanku{
