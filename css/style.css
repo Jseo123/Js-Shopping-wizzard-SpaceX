@@ -326,6 +326,9 @@ font-size: 18px;
   text-align: center;
   
 }
+.finish{
+  display: none;
+}
 .end {
   display: flex;
   flex-direction: column;
@@ -336,17 +339,24 @@ margin-top: 10px;
 background-color: rgba(240, 248, 255, 0);
 color: aliceblue;
 }
+.spaceC {
+  margin-left:40%;
+}
+.tenor-gif-embed{
+  width: 20%;
+  margin-left: 40%;
+}
 #finalBuy {
   width: 90%;
   margin-left: 5%;
 }
 #buyFinal{
-  text-align: center;
-  font-size: 100%;
+  font-size: 110%;
 }
 .col-left {
   width: 35%;
   margin-left: 10px;
+  font-size: 110%;
   background-color: rgba(255, 255, 255, 0.178);
 }
 

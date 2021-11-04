@@ -18,10 +18,10 @@ const adressSection = document.querySelector(".section3");
 const delivery = document.querySelector(".deliverypage");
 const container1 = document.querySelector(".container");
 const thankYouSection = document.querySelector(".thanks");
-const priceFinal = document.getElementById(".price0");
-const priceFinal1 = document.getElementById(".price1");
-const priceFinal2 = document.getElementById(".price2");
-const priceFinal3 = document.getElementById(".price3");
+const priceFinal = document.querySelector(".price0");
+const priceFinal1 = document.querySelector(".price1");
+const priceFinal2 = document.querySelector(".price2");
+const priceFinal3 = document.querySelector(".price3");
 const toDeliveryPress = toDelivery.addEventListener("click", adressToDelivery);
 const mainProductPress = mainProductbtn.addEventListener(
   "click",
@@ -194,6 +194,9 @@ function addSelection() {
   document.getElementById("finalBuy").src = ImgFirst.src;
   if (currentRocket != null) {
     let array = currentRocket.split("-");
+    priceFinal.innerHTML += " " + String(price[array[0]]) + "€";
+    priceFinal2.innerHTML += " " + 2000 + "€"
+    priceFinal3.innerHTML += " " + String(price[array[0]]+ 2000) + "€";
     homepage.style.display = "none";
     product1.style.display = "none";
     username.style.display = "block";
