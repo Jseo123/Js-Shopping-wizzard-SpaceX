@@ -19,6 +19,9 @@
       </div>
     </nav>
 
+<div class="hide-container container"><h2>YOU GOT NO TIME! HURRY UP!</h2> <button class="closemodal">x</button></div>
+
+
     <section class="homepage">
       <div class="SpaceX"><img src="/images/logo.png" width="35%" /></div>
       <div class="main-product-button"><button class="btn1">OUR PRODUCTS</button></div>
@@ -27,16 +30,24 @@
     <section class="main-carrusel" id="step1">
               <!-- Pagina de modelo y color -->
       <div class="columnL">
-        <img class="ImgFirst" id="imgFirstid" src="guidance images\assets\1_falcon_9.jpg" alt="Falcon 9">
+        <h2>Choose your product</h2>
         <div class="mySlides">
-          <img class="selection1" id="first" src="guidance images\assets\1_falcon_9.jpg">
+          <img class="selection1" id="first" src="guidance images\assets\falcon.jpg">
           <img class="selection2" id="second" src="guidance images\assets\2_falcon_heavy.jpg">
           <img class="selection3" id="thrid" src="guidance images\assets\3_dragon.jpeg">
           <img class="selection4" id="fourth" src="guidance images\assets\4_starship-scaled.jpg">
         </div>
+        <img class="ImgFirst" id="imgFirstid" src="guidance images\assets\1_falcon_9.jpg" alt="Falcon 9">
+        <div class="carro">
+          <div class="Shopping-list"><p class="counter">0</p></div>
+          <div class="addToCart">
+            <div class="cart"><button class="remove-one">-</button><button class="addToCart">+</button></div>
+            <div class="shopping-div"><button class="shopping">Add to Cart!</button></div>
+          </div>
+        </div>
       </div>
       <div class="columnR">
-        <h1>select your product</h1>
+        <h1>select your style</h1>
         <div class="photos hide" id="photo1">
           <img class="optionChange" src="images\img1.webp" value="falcon9-amazon">
           <img class="optionChange" src="images\img2.webp" value="falcon9-assembler">
@@ -61,9 +72,7 @@
           <img class="optionChange" src="guidance images\pink bfr.png" value="bfr-google">
           <img class="optionChange" src="guidance images\pink bfr.png" value="bfr-meta">
         </div>
-        <div class="Shopping-list"><p class="counter">0</p></div>
-        <div class="cart"><button class="remove-one">-</button><button class="addToCart">+</button></div>
-        <div clas="shopping-div"><button class="shopping">Add to Cart!</button></div>
+       
         <!-- Detail column to shopping-->
         <button class="btn2"> Lo que Sea</button>
       </div>
@@ -113,7 +122,7 @@
             minlength="8"
             maxlength="20"
           /><br />
-          <button class="username-to-adress-button" id="profileButton" type="submit">NEXT</button>
+          <button class="username-to-adress-button" id="profileButton" type="button">NEXT</button>
         </form>
       </section>
 
@@ -185,6 +194,7 @@
           <label for="regularAddress"> Is this your regular address?</label>
           <input type="checkbox" name="regularAddress" id="regularAddress" />
         </form>
+        <button class="todelivery">NEXT</button>
       </section>
 
       <section id="step4 delivery"><!-- Shipping Premium -->
