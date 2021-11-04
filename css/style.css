@@ -326,6 +326,9 @@ font-size: 18px;
   text-align: center;
   
 }
+.finish{
+  display: none;
+}
 .end {
   display: flex;
   flex-direction: column;
@@ -337,7 +340,7 @@ background-color: rgba(240, 248, 255, 0);
 color: aliceblue;
 }
 .spaceC {
-  margin-left:30%;
+  margin-left:40%;
 }
 .tenor-gif-embed{
   width: 20%;
