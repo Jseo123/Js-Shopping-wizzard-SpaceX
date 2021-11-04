@@ -1,6 +1,6 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
-const cartBtn = document.querySelector(".addToCart");
+// const cartBtn = document.querySelector(".addToCart");
 const toDelivery = document.querySelector(".todelivery");
 const removeOne = document.querySelector(".remove-one");
 const counter = document.querySelector(".counter");
@@ -17,8 +17,12 @@ const username = document.querySelector(".username");
 const adressSection = document.querySelector(".section3");
 const delivery = document.querySelector(".deliverypage");
 const container1 = document.querySelector(".container");
-const thankYouSection = document.querySelector(".thanks")
-const toDeliveryPress = toDelivery.addEventListener("click", adressToDelivery)
+const thankYouSection = document.querySelector(".thanks");
+const priceFinal = document.getElementById(".price0");
+const priceFinal1 = document.getElementById(".price1");
+const priceFinal2 = document.getElementById(".price2");
+const priceFinal3 = document.getElementById(".price3");
+const toDeliveryPress = toDelivery.addEventListener("click", adressToDelivery);
 const mainProductPress = mainProductbtn.addEventListener(
   "click",
   contentChange1
@@ -35,13 +39,16 @@ var changePhoto2 = document.querySelector("#photo2");
 var changePhoto3 = document.querySelector("#photo3");
 var changePhoto4 = document.querySelector("#photo4");
 const changeSelection2 = document.querySelector(".selection2");
-const cartPress = cartBtn.addEventListener("click", addToCar);
-const remove = removeOne.addEventListener("click", oneLess);
+// const cartPress = cartBtn.addEventListener("click", addToCar);
+// const remove = removeOne.addEventListener("click", oneLess);
 const shoppingPress = shopping.addEventListener("click", addSelection);
 const timeOutStarts = shopping.addEventListener("click", timeoutFunction);
 const timeInterval = shopping.addEventListener("click", intervalFunction);
 const closeModalPress = closeModal.addEventListener("click", hideInterval);
-const deliveryToThanksPress = deliveryToThanks.addEventListener("click", changToThanks)
+const deliveryToThanksPress = deliveryToThanks.addEventListener(
+  "click",
+  changToThanks
+);
 
 function hideInterval() {
   container1.setAttribute("class", "hide-container");
@@ -59,6 +66,7 @@ function intervalFunction() {
 
 function timeoutFunction() {
   setTimeout(outOfTime, 300000);
+
   function outOfTime() {
     window.location.reload(true);
   }
@@ -89,6 +97,7 @@ let price = {
   google: 2000,
   fifa: 20,
 };
+
 function Order(product, priceProduct, sponsor, priceSponsor) {
   this.product = product;
   this.price = priceProduct;
@@ -114,14 +123,13 @@ function backToHome() {
 }
 
 // events
-minitureImg.addEventListener("click", changeMiniature);
-changePhoto1.addEventListener("click", changeImg1);
-changePhoto2.addEventListener("click", changeImg2);
-changePhoto3.addEventListener("click", changeImg3);
-changePhoto4.addEventListener("click", changeImg4);
-// changeSelection2.addEventListener("click", selector2)
+minitureImg.addEventListener("click", changeMiniature); //cambio miniatura con principal
+changePhoto1.addEventListener("click", changeImg1); //cambio lateral con principal
+changePhoto2.addEventListener("click", changeImg2);//cambio lateral con principal
+changePhoto3.addEventListener("click", changeImg3);//cambio lateral con principal
+changePhoto4.addEventListener("click", changeImg4);//cambio lateral con principal
 
-// change miniture to ImgFirst
+// cambios de imagen miniatura superior con la imagen principal productos
 function changeMiniature(e) {
   ImgFirst.src = e.target.src;
   hide();
@@ -129,72 +137,63 @@ function changeMiniature(e) {
     case "first":
       changePhoto1.classList.remove("hide");
       changePhoto1.classList.add("show");
+      counter.innerHTML = String(price["falcon9"]) + "€";
       break;
-      case "second":
-        changePhoto2.classList.remove("hide");
-        changePhoto2.classList.add("show");
-        break;
-        case "thrid":
-          changePhoto3.classList.remove("hide");
-          changePhoto3.classList.add("show");
-          break;
-          case "fourth":
-            changePhoto4.classList.remove("hide");
-            changePhoto4.classList.add("show");
-            break;
-          }
-        }
-        
-        // function to hide colunm R
-        function hide() {
-          changePhoto1.classList.remove("show");
-          changePhoto2.classList.remove("show");
-          changePhoto3.classList.remove("show");
-          changePhoto4.classList.remove("show");
-          changePhoto1.classList.add("hide");
-          changePhoto2.classList.add("hide");
-          changePhoto3.classList.add("hide");
-          changePhoto4.classList.add("hide");
-        }
-        
-        // change color ImgFirst
-        function changeImg1(e) {
-          ImgFirst.src = e.target.src;
-          currentRocket = e.target.getAttribute("value");
-        }
-        function changeImg2(e) {
-          ImgFirst.src = e.target.src;
+    case "second":
+      changePhoto2.classList.remove("hide");
+      changePhoto2.classList.add("show");
+      counter.innerHTML = String(price["heavy"]) + "€";
+      break;
+    case "thrid":
+      changePhoto3.classList.remove("hide");
+      changePhoto3.classList.add("show");
+      counter.innerHTML = String(price["dragon"]) + "€";
+      break;
+    case "fourth":
+      changePhoto4.classList.remove("hide");
+      changePhoto4.classList.add("show");
+      counter.innerHTML = String(price["bfr"]) + "€";
+      break;
+  }
+}
+
+// function to hide colunm R columna lateral productos
+function hide() {
+  changePhoto1.classList.remove("show");
+  changePhoto2.classList.remove("show");
+  changePhoto3.classList.remove("show");
+  changePhoto4.classList.remove("show");
+  changePhoto1.classList.add("hide");
+  changePhoto2.classList.add("hide");
+  changePhoto3.classList.add("hide");
+  changePhoto4.classList.add("hide");
+}
+
+// cambios de la imagen lateral productos con la principal
+function changeImg1(e) {
+  ImgFirst.src = e.target.src;
   currentRocket = e.target.getAttribute("value");
 }
+
+function changeImg2(e) {
+  ImgFirst.src = e.target.src;
+  currentRocket = e.target.getAttribute("value");
+}
+
 function changeImg3(e) {
   ImgFirst.src = e.target.src;
   currentRocket = e.target.getAttribute("value");
 }
+
 function changeImg4(e) {
   ImgFirst.src = e.target.src;
   currentRocket = e.target.getAttribute("value");
-}
-
-function addToCar() {
-  counter.innerHTML = parseInt(counter.innerHTML) + 1;
-}
-
-function oneLess() {
-  if (counter.innerHTML > 0) {
-    counter.innerHTML = parseInt(counter.innerHTML) - 1;
-  }
 }
 
 function addSelection() {
   document.getElementById("finalBuy").src = ImgFirst.src;
   if (currentRocket != null) {
     let array = currentRocket.split("-");
-    // order.product = array[0];
-    // order.productPrice = price[array[0]];
-    // sponsor.product = array[1];
-    // order.sponsorPrice = price[array[1]];
-    // image = order.product + order.sponsor;
-    //console.log(order);
     homepage.style.display = "none";
     product1.style.display = "none";
     username.style.display = "block";
