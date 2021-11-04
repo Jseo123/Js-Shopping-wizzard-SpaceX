@@ -8,14 +8,17 @@ const spaceX = document.querySelector(".navlogo");
 const shopping = document.querySelector(".shopping");
 const closeModal = document.querySelector(".closemodal");
 const usernameToAdress = document.querySelector(".username-to-adress-button");
+const deliveryToThanks = document.querySelector(".thankstobtn");
 const homepage = document.querySelector(".homepage");
 const product1 = document.querySelector(".main-carrusel");
 const product2 = document.querySelector(".product2");
 const product3 = document.querySelector(".product3");
 const username = document.querySelector(".username");
 const adressSection = document.querySelector(".section3");
-const delivery = document.querySelector(".delivery");
+const delivery = document.querySelector(".deliverypage");
 const container1 = document.querySelector(".container");
+const thankYouSection = document.querySelector(".thanks")
+const toDeliveryPress = toDelivery.addEventListener("click", adressToDelivery)
 const mainProductPress = mainProductbtn.addEventListener(
   "click",
   contentChange1
@@ -38,6 +41,7 @@ const shoppingPress = shopping.addEventListener("click", addSelection);
 const timeOutStarts = shopping.addEventListener("click", timeoutFunction);
 const timeInterval = shopping.addEventListener("click", intervalFunction);
 const closeModalPress = closeModal.addEventListener("click", hideInterval);
+const deliveryToThanksPress = deliveryToThanks.addEventListener("click", changToThanks)
 
 function hideInterval() {
   container1.setAttribute("class", "hide-container");
@@ -245,4 +249,14 @@ function changeToAdress() {
   username.style.display = "none";
   adressSection.style.display = "flex";
   return;
+}
+
+function adressToDelivery() {
+  adressSection.style.display = "none";
+  delivery.style.display = "block";
+}
+
+function changToThanks() {
+  delivery.style.display = "none";
+  thankYouSection.style.display = "block";
 }

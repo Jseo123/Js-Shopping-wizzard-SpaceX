@@ -362,4 +362,7 @@ display: none;
 
 .deliverypage {
   display:none;
+  background-color: rgba(0, 0, 0, 0.425);
+  color: white;
+  margin-top: 10%;
 }
