@@ -261,7 +261,7 @@ function adressToDelivery() {
 }
 
 function changToThanks() {
-  delivery.style.display = "none";
+  finishSection.style.display = "none";
   thankYouSection.style.display = "block";
 }
 
