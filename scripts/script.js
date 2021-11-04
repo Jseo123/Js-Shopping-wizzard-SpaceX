@@ -13,6 +13,7 @@ const product3 = document.querySelector(".product3");
 const username = document.querySelector(".username");
 const adressSection = document.querySelector(".section3");
 const delivery = document.querySelector(".delivery");
+const container1 = document.querySelector(".container1");
 const mainProductPress = mainProductbtn.addEventListener(
   "click",
   contentChange1
