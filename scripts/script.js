@@ -74,7 +74,7 @@ let price = {
   amazon: 8000,
   assembler: 9000,
   google: 2000,
-  meta: 20,
+  fifa: 20,
 };
 // var buyPhoto = document.getElementById("finalBuy");
 // buyPhoto.src = ImgFirst.src;
