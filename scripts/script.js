@@ -1,6 +1,7 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
 // const cartBtn = document.querySelector(".addToCart");
+const deliveryToFinish = document.querySelector("finishbtn")
 const toDelivery = document.querySelector(".todelivery");
 const removeOne = document.querySelector(".remove-one");
 const counter = document.querySelector(".counter");
@@ -9,6 +10,7 @@ const shopping = document.querySelector(".shopping");
 const closeModal = document.querySelector(".closemodal");
 const usernameToAdress = document.querySelector(".username-to-adress-button");
 const deliveryToThanks = document.querySelector(".thankstobtn");
+const finishSection = document.querySelector(".finish")
 const homepage = document.querySelector(".homepage");
 const product1 = document.querySelector(".main-carrusel");
 const product2 = document.querySelector(".product2");
@@ -22,6 +24,7 @@ const priceFinal = document.querySelector(".price0");
 const priceFinal1 = document.querySelector(".price1");
 const priceFinal2 = document.querySelector(".price2");
 const priceFinal3 = document.querySelector(".price3");
+const deliveryToFinishPress = deliveryToFinish.addEventListener("click", changeToFinish)
 const toDeliveryPress = toDelivery.addEventListener("click", adressToDelivery);
 const mainProductPress = mainProductbtn.addEventListener(
   "click",
@@ -260,4 +263,9 @@ function adressToDelivery() {
 function changToThanks() {
   delivery.style.display = "none";
   thankYouSection.style.display = "block";
+}
+
+function changeToFinish() {
+  delivery.style.display = "none";
+  finishSection.style.display = "block";
 }
