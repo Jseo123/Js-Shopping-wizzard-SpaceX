@@ -190,6 +190,10 @@ footer li {
   width: 200%;
 }
 
+footer li img {
+  margin-left: 3%;
+}
+
 
 footer ul li p {
   color: white;
