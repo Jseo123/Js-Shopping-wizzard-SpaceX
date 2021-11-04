@@ -76,14 +76,21 @@ let price = {
   google: 2000,
   meta: 20,
 };
-
-let order = {
-  product: "",
-  productPrice: "",
-  sponsor: "",
-  sponsorPrice: "",
-  image: ""
+// var buyPhoto = document.getElementById("finalBuy");
+// buyPhoto.src = ImgFirst.src;
+function Order(product, priceProduct, sponsor, priceSponsor) {
+  this.product = product;
+  this.price = priceProduct;
+  this.sponsor = sponsor;
+  this.priceSponsor = priceSponsor;
 }
+var order = new Order("falcon9", 100000, "amazon", 8000, )
+
+document.querySelector(".despro1").innerHTML += order.product;
+document.querySelector(".despro2").innerHTML += order.sponsor;
+
+// document.querySelector() + " " + String(order.price) + " " + String(order.priceSponsor);
+
 
 function contentChange1() {
   product1.style.display = "flex";
