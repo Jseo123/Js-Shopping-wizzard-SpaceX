@@ -261,8 +261,12 @@ footer ul li p {
 
 .section3 {
   display: none;
+  position: absolute;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.247);
+  overflow: scroll;
+  top: 1%;
+  left: 40%
 }
 
 .modal-container {
