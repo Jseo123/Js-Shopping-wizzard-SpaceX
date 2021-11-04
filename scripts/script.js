@@ -1,7 +1,7 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
 // const cartBtn = document.querySelector(".addToCart");
-const deliveryToFinish = document.querySelector(".finishbtn")
+const deliveryToFinish = document.querySelector(".finishbtn");
 const toDelivery = document.querySelector(".todelivery");
 const removeOne = document.querySelector(".remove-one");
 const counter = document.querySelector(".counter");
@@ -10,7 +10,7 @@ const shopping = document.querySelector(".shopping");
 const closeModal = document.querySelector(".closemodal");
 const usernameToAdress = document.querySelector(".username-to-adress-button");
 const deliveryToThanks = document.querySelector(".thankstobtn");
-const finishSection = document.querySelector(".finish")
+const finishSection = document.querySelector(".finish");
 const homepage = document.querySelector(".homepage");
 const product1 = document.querySelector(".main-carrusel");
 const product2 = document.querySelector(".product2");
@@ -24,7 +24,10 @@ const priceFinal = document.querySelector(".price0");
 const priceFinal1 = document.querySelector(".price1");
 const priceFinal2 = document.querySelector(".price2");
 const priceFinal3 = document.querySelector(".price3");
-const deliveryToFinishPress = deliveryToFinish.addEventListener("click", changeToFinish)
+const deliveryToFinishPress = deliveryToFinish.addEventListener(
+  "click",
+  changeToFinish
+);
 const toDeliveryPress = toDelivery.addEventListener("click", adressToDelivery);
 const mainProductPress = mainProductbtn.addEventListener(
   "click",
@@ -128,9 +131,9 @@ function backToHome() {
 // events
 minitureImg.addEventListener("click", changeMiniature); //cambio miniatura con principal
 changePhoto1.addEventListener("click", changeImg1); //cambio lateral con principal
-changePhoto2.addEventListener("click", changeImg2);//cambio lateral con principal
-changePhoto3.addEventListener("click", changeImg3);//cambio lateral con principal
-changePhoto4.addEventListener("click", changeImg4);//cambio lateral con principal
+changePhoto2.addEventListener("click", changeImg2); //cambio lateral con principal
+changePhoto3.addEventListener("click", changeImg3); //cambio lateral con principal
+changePhoto4.addEventListener("click", changeImg4); //cambio lateral con principal
 
 // cambios de imagen miniatura superior con la imagen principal productos
 function changeMiniature(e) {
@@ -198,8 +201,8 @@ function addSelection() {
   if (currentRocket != null) {
     let array = currentRocket.split("-");
     priceFinal.innerHTML += " " + String(price[array[0]]) + "€";
-    priceFinal2.innerHTML += " " + 2000 + "€"
-    priceFinal3.innerHTML += " " + String(price[array[0]]+ 2000) + "€";
+    priceFinal2.innerHTML += " " + 2000 + "€";
+    priceFinal3.innerHTML += " " + String(price[array[0]] + 2000) + "€";
     homepage.style.display = "none";
     product1.style.display = "none";
     username.style.display = "block";
@@ -261,11 +264,31 @@ function adressToDelivery() {
 }
 
 function changToThanks() {
-  finishSection.style.display = "none";
-  thankYouSection.style.display = "block";
+  if (processFinal()) {
+    finishSection.style.display = "none";
+    thankYouSection.style.display = "block";
+  }
 }
 
 function changeToFinish() {
   delivery.style.display = "none";
   finishSection.style.display = "block";
+}
+
+//Validation
+
+function processProfile(params) {}
+
+function processAddress(params) {}
+
+function processFinal() {
+  var checkBox = document.getElementById("agree");
+  if (checkBox.checked == false) {
+    let element = document.querySelector("#conditions");
+    let newElement = document.createElement("P");
+    newElement.innerHTML = "Please accept the terms and conditions";
+    element.parentNode.insertBefore(newElement, element.nextSibling);
+    return false;
+  }
+  return true;
 }

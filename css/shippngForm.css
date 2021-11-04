@@ -1,6 +1,6 @@
 .deliverypage{
   text-align: center;
-  background: #4e0808;
+  background: #0c0c0c46;
   color: #fff4f4;
   width: 500px;
   margin: auto;
@@ -11,9 +11,9 @@
 }
 
 input{
-  width: 70%;
-  padding: 12px 20px;
-  margin: 18px 15px;
+  width: 60%;
+  /* padding: 12px 20px;
+  margin: 18px 15px; */
   box-sizing: border-box;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 4px;
@@ -23,7 +23,22 @@ input{
 }
 input{
   background-color: rgb(255, 255, 255);
-  color:black
-  transition width 0.4s ease-in-out;
+  color:black;
   width: 75%;
+}
+.fShipping{
+  display: flex;
+  left: 10%;
+  margin-right: 50%;
+  padding: 1px 0px 25px;
+}
+.deliveryDate{
+  display: flex;
+  left: 10%;
+  margin-right: 50%;
+  padding: 1px 0px 25px;
+}
+.ffship{
+  font-size: 100%;
+  padding-bottom: 10%;
 }
