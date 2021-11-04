@@ -40,19 +40,19 @@ function validateProfile() {
 }
 
 // Validation for the address form
-function validateAddress(){
+function validateAddress() {
   let errors = {
-    firstName = [],
-    lastName = [],
-    birthday = [],
-    address1 = [],
-    address2 = [],
-    postalCode = [],
-    country = [],
-    countryCode = [],
-    phoneNumber = [],
-    regularAddress = []
-  }
+    firstName: [],
+    lastName: [],
+    birthday: [],
+    address1: [],
+    address2: [],
+    postalCode: [],
+    country: [],
+    countryCode: [],
+    phoneNumber: [],
+    regularAddress: [],
+  };
   let firstName = document.addressForm.firstName.value;
   let lastName = document.addressForm.lastName.value;
   let birthday = document.addressForm.birthday.value;
@@ -91,11 +91,10 @@ function validateAddress(){
     errors.phoneNumber.push("Phone number should be 9 digits long");
   }
   if (phoneNumber.match(onlyNumbers) == null) {
-    errors.phoneNumber.push("Phone number can only contain letters")
+    errors.phoneNumber.push("Phone number can only contain letters");
   }
   console.log(errors);
   return errors;
-
 }
 
 export { validateProfile, validateAddress };
