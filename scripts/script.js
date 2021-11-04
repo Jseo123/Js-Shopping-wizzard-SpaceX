@@ -1,26 +1,32 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
 const cartBtn = document.querySelector(".addToCart");
-const toDelivery = document.querySelector(".todelivery")
+const toDelivery = document.querySelector(".todelivery");
 const removeOne = document.querySelector(".remove-one");
 const counter = document.querySelector(".counter");
 const spaceX = document.querySelector(".navlogo");
 const shopping = document.querySelector(".shopping");
-const closeModal = document.querySelector(".closemodal")
+const closeModal = document.querySelector(".closemodal");
 const usernameToAdress = document.querySelector(".username-to-adress-button");
+const deliveryToThanks = document.querySelector(".thankstobtn");
 const homepage = document.querySelector(".homepage");
 const product1 = document.querySelector(".main-carrusel");
 const product2 = document.querySelector(".product2");
 const product3 = document.querySelector(".product3");
 const username = document.querySelector(".username");
 const adressSection = document.querySelector(".section3");
-const delivery = document.querySelector(".delivery");
+const delivery = document.querySelector(".deliverypage");
 const container1 = document.querySelector(".container");
+const thankYouSection = document.querySelector(".thanks")
+const toDeliveryPress = toDelivery.addEventListener("click", adressToDelivery)
 const mainProductPress = mainProductbtn.addEventListener(
   "click",
   contentChange1
 );
-const usernameToAdressPress = usernameToAdress.addEventListener("click", changeToAdress)
+const usernameToAdressPress = usernameToAdress.addEventListener(
+  "click",
+  changeToAdress
+);
 const spaceXclick = spaceX.addEventListener("click", backToHome);
 var ImgFirst = document.querySelector(".ImgFirst");
 var minitureImg = document.querySelector(".mySlides");
@@ -34,30 +40,37 @@ const remove = removeOne.addEventListener("click", oneLess);
 const shoppingPress = shopping.addEventListener("click", addSelection);
 const timeOutStarts = shopping.addEventListener("click", timeoutFunction);
 const timeInterval = shopping.addEventListener("click", intervalFunction);
-const closeModalPress = closeModal.addEventListener("click", hideInterval)
+const closeModalPress = closeModal.addEventListener("click", hideInterval);
+const deliveryToThanksPress = deliveryToThanks.addEventListener("click", changToThanks)
 
 function hideInterval() {
   container1.setAttribute("class", "hide-container");
 }
 
 function intervalFunction() {
-setInterval(() => {
-  container1.setAttribute("class", "modal-container container")
-}, 60000);
+  setInterval(() => {
+    container1.setAttribute("class", "modal-container container");
+  }, 60000);
 
-setInterval(() => {
-  container1.setAttribute("class", "hide-container")
-}, 10000);
+  setInterval(() => {
+    container1.setAttribute("class", "hide-container");
+  }, 10000);
 }
-
-
 
 function timeoutFunction() {
-  setTimeout(outOfTime,300000)
-function  outOfTime() {
-  window.location.reload(true);
+  setTimeout(outOfTime, 300000);
+  function outOfTime() {
+    window.location.reload(true);
+  }
 }
-}
+
+//radius buttons
+const freeShipping = document.querySelector("#freeShipping");
+const fastShipping = document.querySelector("#fastShipping");
+const expressShipping = document.querySelector("#expressShipping");
+freeShipping.addEventListener("click", shippingDate);
+fastShipping.addEventListener("click", shippingDate);
+expressShipping.addEventListener("click", shippingDate);
 
 let currentRocket = null;
 
@@ -76,21 +89,18 @@ let price = {
   google: 2000,
   fifa: 20,
 };
-// var buyPhoto = document.getElementById("finalBuy");
-// buyPhoto.src = ImgFirst.src;
 function Order(product, priceProduct, sponsor, priceSponsor) {
   this.product = product;
   this.price = priceProduct;
   this.sponsor = sponsor;
   this.priceSponsor = priceSponsor;
 }
-var order = new Order("falcon9", 100000, "amazon", 8000, )
+var order = new Order("falcon9", 100000, "amazon", 8000);
 
 document.querySelector(".despro1").innerHTML += order.product;
 document.querySelector(".despro2").innerHTML += order.sponsor;
 
 // document.querySelector() + " " + String(order.price) + " " + String(order.priceSponsor);
-
 
 function contentChange1() {
   product1.style.display = "flex";
@@ -99,7 +109,7 @@ function contentChange1() {
 }
 
 function backToHome() {
- window.location.reload(true);
+  window.location.reload(true);
   return;
 }
 
@@ -120,40 +130,40 @@ function changeMiniature(e) {
       changePhoto1.classList.remove("hide");
       changePhoto1.classList.add("show");
       break;
-    case "second":
-      changePhoto2.classList.remove("hide");
-      changePhoto2.classList.add("show");
-      break;
-    case "thrid":
-      changePhoto3.classList.remove("hide");
-      changePhoto3.classList.add("show");
-      break;
-    case "fourth":
-      changePhoto4.classList.remove("hide");
-      changePhoto4.classList.add("show");
-      break;
-  }
-}
-
-// function to hide colunm R
-function hide() {
-  changePhoto1.classList.remove("show");
-  changePhoto2.classList.remove("show");
-  changePhoto3.classList.remove("show");
-  changePhoto4.classList.remove("show");
-  changePhoto1.classList.add("hide");
-  changePhoto2.classList.add("hide");
-  changePhoto3.classList.add("hide");
-  changePhoto4.classList.add("hide");
-}
-
-// change color ImgFirst
-function changeImg1(e) {
-  ImgFirst.src = e.target.src;
-  currentRocket = e.target.getAttribute("value");
-}
-function changeImg2(e) {
-  ImgFirst.src = e.target.src;
+      case "second":
+        changePhoto2.classList.remove("hide");
+        changePhoto2.classList.add("show");
+        break;
+        case "thrid":
+          changePhoto3.classList.remove("hide");
+          changePhoto3.classList.add("show");
+          break;
+          case "fourth":
+            changePhoto4.classList.remove("hide");
+            changePhoto4.classList.add("show");
+            break;
+          }
+        }
+        
+        // function to hide colunm R
+        function hide() {
+          changePhoto1.classList.remove("show");
+          changePhoto2.classList.remove("show");
+          changePhoto3.classList.remove("show");
+          changePhoto4.classList.remove("show");
+          changePhoto1.classList.add("hide");
+          changePhoto2.classList.add("hide");
+          changePhoto3.classList.add("hide");
+          changePhoto4.classList.add("hide");
+        }
+        
+        // change color ImgFirst
+        function changeImg1(e) {
+          ImgFirst.src = e.target.src;
+          currentRocket = e.target.getAttribute("value");
+        }
+        function changeImg2(e) {
+          ImgFirst.src = e.target.src;
   currentRocket = e.target.getAttribute("value");
 }
 function changeImg3(e) {
@@ -175,26 +185,77 @@ function oneLess() {
   }
 }
 
-
 function addSelection() {
+  document.getElementById("finalBuy").src = ImgFirst.src;
   if (currentRocket != null) {
-    let array = currentRocket.split("-")
-   // order.product = array[0];
-   // order.productPrice = price[array[0]];
-   // sponsor.product = array[1];
-   // order.sponsorPrice = price[array[1]];
-   // image = order.product + order.sponsor;
+    let array = currentRocket.split("-");
+    // order.product = array[0];
+    // order.productPrice = price[array[0]];
+    // sponsor.product = array[1];
+    // order.sponsorPrice = price[array[1]];
+    // image = order.product + order.sponsor;
     //console.log(order);
     homepage.style.display = "none";
     product1.style.display = "none";
-  username.style.display = "block";
-  return;
+    username.style.display = "block";
+    return;
   }
 }
 
-function changeToAdress() {
-  homepage.style.display="none";
-  username.style.display="none";
-  adressSection.style.display="flex";
-  return;
+//Shipping date calculation
+function shippingDate(e) {
+  const deliveryElement = document.querySelector(".deliveryDate p");
+  let deliveryTime = "";
+  let todaysDate = new Date();
+  let minDelivery = new Date();
+  let maxDelivery = new Date();
+  let days;
+  switch (e.target.value) {
+    case "free":
+      days = 1;
+      break;
+    case "fast":
+      days = 7;
+      break;
+    case "express":
+      days = 30;
+      break;
   }
+  minDelivery.setDate(todaysDate.getDate() + days);
+  maxDelivery.setDate(minDelivery.getDate() + days + 1);
+  console.log(todaysDate);
+  var dateOptions = {
+    timeZone: "Europe/Madrid",
+    hour12: false,
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  };
+  deliveryTime =
+    "Between " +
+    minDelivery.toLocaleString("en-US", dateOptions) +
+    " and " +
+    maxDelivery.toLocaleString();
+  deliveryElement.innerHTML = deliveryTime;
+  console.log(deliveryTime);
+}
+
+function changeToAdress() {
+  homepage.style.display = "none";
+  username.style.display = "none";
+  adressSection.style.display = "flex";
+  return;
+}
+
+function adressToDelivery() {
+  adressSection.style.display = "none";
+  delivery.style.display = "block";
+}
+
+function changToThanks() {
+  delivery.style.display = "none";
+  thankYouSection.style.display = "block";
+}

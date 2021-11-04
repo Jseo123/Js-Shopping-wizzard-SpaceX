@@ -144,7 +144,7 @@ h2 {
 }
 
 
-/*ocultar y mostrar la imagen de la col-derecha*/
+/*ocultar y mostrar la imagen productos de la col-derecha*/
 
 .optionChange {
   max-width: 100%;
@@ -188,6 +188,10 @@ footer ul {
 footer li {
   margin-left: 15%;
   width: 200%;
+}
+
+footer li img {
+  margin-left: 3%;
 }
 
 
@@ -257,8 +261,12 @@ footer ul li p {
 
 .section3 {
   display: none;
+  position: absolute;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.247);
+  overflow: scroll;
+  top: 1%;
+  left: 40%
 }
 
 .modal-container {
@@ -296,25 +304,6 @@ footer ul li p {
 .hide-container {
   display: none;
 }
-.todelivery {
-display: flex;
-flex-direction: column;
-width: 30%;
-text-decoration: none;
-background-color: #ffffff;
-border: none;
-color: rgb(0, 0, 0);
-font-size: 26px;
-padding: 5px 0px;
-/* background-color: #ffffff;
-border: none;
-color: rgb(0, 0, 0);
-padding: 20px 0px;
-width: 70%;
-text-decoration: none;
-margin: 20px 0px; */
-cursor: pointer;
-}
 
 .thanku{
 display: flex;
@@ -345,7 +334,14 @@ margin-top: 10px;
 background-color: rgba(240, 248, 255, 0);
 color: aliceblue;
 }
-
+#finalBuy {
+  width: 90%;
+  margin-left: 5%;
+}
+#buyFinal{
+  text-align: center;
+  font-size: 100%;
+}
 .col-left {
   width: 35%;
   margin-left: 10px;
@@ -354,4 +350,11 @@ color: aliceblue;
 
 .thanks {
 display: none;
+}
+
+.deliverypage {
+  display:none;
+  background-color: rgba(0, 0, 0, 0.425);
+  color: white;
+  margin-top: 10%;
 }
