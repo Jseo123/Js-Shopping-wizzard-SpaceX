@@ -1,7 +1,7 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
 // const cartBtn = document.querySelector(".addToCart");
-const deliveryToFinish = document.querySelector("finishbtn")
+const deliveryToFinish = document.querySelector(".finishbtn")
 const toDelivery = document.querySelector(".todelivery");
 const removeOne = document.querySelector(".remove-one");
 const counter = document.querySelector(".counter");
