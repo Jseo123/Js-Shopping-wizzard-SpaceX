@@ -148,6 +148,7 @@ h2 {
 
 .optionChange {
   max-width: 100%;
+  border-radius: 10px;
 }
 .hide {
 opacity: 0;
