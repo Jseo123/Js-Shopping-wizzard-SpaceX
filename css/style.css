@@ -239,9 +239,9 @@ footer ul li p {
   background-color: rgba(33, 33, 209, 0.404);
   position: absolute;
  top: 10%;
-  right: 5%;
+  right: 0%;
   height: 15%;
-  width: 30% ;
+  width: 100% ;
   justify-content: center;
   align-items: center;
 }
@@ -260,7 +260,10 @@ footer ul li p {
   background-color: red;
   color: white;
   border-radius: 50%;
-  height: 50%;
+  height: 20%;
+  position: absolute;
+  top: 0%;
+  right: 0%;
 }
 
 .hide-container {

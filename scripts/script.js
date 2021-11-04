@@ -36,12 +36,12 @@ const timeInterval = shopping.addEventListener("click", intervalFunction);
 const closeModalPress = closeModal.addEventListener("click", hideInterval)
 
 function hideInterval() {
-  container1.setAttribute("class", ".hide-container");
+  container1.setAttribute("class", "hide-container");
 }
 
 function intervalFunction() {
 setInterval(() => {
-  container1.setAttribute("class", ".modal-container")
+  container1.setAttribute("class", "modal-container container")
 }, 60000);
 }
 
