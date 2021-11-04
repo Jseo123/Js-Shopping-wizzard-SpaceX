@@ -232,6 +232,7 @@ footer ul li p {
 
 .section3 {
   display: none;
+  background-color: rgba(255, 255, 255, 0.247);
 }
 
 .modal-container {
@@ -268,4 +269,7 @@ footer ul li p {
 
 .hide-container {
   display: none;
+}
+.todelivery {
+display: flex;
 }
