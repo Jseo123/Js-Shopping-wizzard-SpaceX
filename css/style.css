@@ -149,6 +149,8 @@ h2 {
 .optionChange {
   max-width: 100%;
   border-radius: 10px;
+  filter: drop-shadow(2px 14px 22px black);
+  border: #203b7e 1px solid;
 }
 .hide {
 opacity: 0;
