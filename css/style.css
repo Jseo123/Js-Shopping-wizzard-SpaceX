@@ -255,9 +255,9 @@ footer ul li p {
   border-radius: 21px;
 }
 
-
 .section3 {
   display: none;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 0.247);
 }
 
@@ -265,7 +265,7 @@ footer ul li p {
   display: flex;
   background-color: rgba(33, 33, 209, 0.404);
   position: absolute;
- top: 10%;
+  top: 10%;
   right: 0%;
   height: 15%;
   width: 100% ;
@@ -298,6 +298,22 @@ footer ul li p {
 }
 .todelivery {
 display: flex;
+flex-direction: column;
+width: 30%;
+text-decoration: none;
+background-color: #ffffff;
+border: none;
+color: rgb(0, 0, 0);
+font-size: 26px;
+padding: 5px 0px;
+/* background-color: #ffffff;
+border: none;
+color: rgb(0, 0, 0);
+padding: 20px 0px;
+width: 70%;
+text-decoration: none;
+margin: 20px 0px; */
+cursor: pointer;
 }
 
 .thanku{
@@ -317,6 +333,7 @@ font-size: 18px;
 }
 .titlePurch {
   text-align: center;
+  
 }
 .end {
   display: flex;
