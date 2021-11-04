@@ -28,7 +28,7 @@ const changeSelection2 = document.querySelector(".selection2");
 const cartPress = cartBtn.addEventListener("click", addToCar);
 const remove = removeOne.addEventListener("click", oneLess);
 const shoppingPress = shopping.addEventListener("click", addSelection);
-const nextPress = btn4.addEventListener("click", changeToStep4);
+
 
 let currentRocket = null;
 
