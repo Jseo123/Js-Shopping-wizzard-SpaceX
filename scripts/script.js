@@ -11,7 +11,7 @@ const product1 = document.querySelector(".main-carrusel");
 const product2 = document.querySelector(".product2");
 const product3 = document.querySelector(".product3");
 const username = document.querySelector(".username");
-const adress = document.querySelector(".adress");
+const adressSection = document.querySelector(".section3");
 const delivery = document.querySelector(".delivery");
 const mainProductPress = mainProductbtn.addEventListener(
   "click",
@@ -28,6 +28,7 @@ const changeSelection2 = document.querySelector(".selection2");
 const cartPress = cartBtn.addEventListener("click", addToCar);
 const remove = removeOne.addEventListener("click", oneLess);
 const shoppingPress = shopping.addEventListener("click", addSelection);
+
 
 let currentRocket = null;
 
@@ -48,11 +49,11 @@ let price = {
 };
 
 let order = {
-  product = "",
-  productPrice = "",
-  sponsor = "",
-  sponsorPrice = "",
-  image = ""
+  product: "",
+  productPrice: "",
+  sponsor: "",
+  sponsorPrice: "",
+  image: ""
 }
 
 function contentChange1() {
