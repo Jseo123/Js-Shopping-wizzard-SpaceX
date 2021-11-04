@@ -199,7 +199,29 @@
         </form>
         <button class="todelivery">NEXT</button>
       </section>
-      <section id="step4 delivery"><!-- Shipping Premium -->
+      <section id="step4 delivery">
+        <!-- Modo de envio -->
+        <form name="shippingForm" id="shippingForm">
+          <input type="radio" name="shipping" id="freeShipping" value="free" required>
+          <label for="freeShipping">Free shipment (1month)</label>
+          <input type="radio" name="shipping" id="fastShipping" value="fast">
+          <label for="fastShipping">Fast shipment (1 week)</label>
+          <input type="radio" name="shipping" id="expressShipping" value="express">
+          <label for="expressShipping">Express shipment (24h)</label>
+          <input type="checkbox" name="gift" id="gift">
+          <div class="deliveryDate">
+            <h5>Estimated delivery Date:</h5>
+            <p></p>
+          </div>
+          <label for="gift">Is it a gift?</label>
+          <label for="giftMessage">Gift Message</label>
+          <textarea name="giftMessage" id="giftMessage" cols="30" rows="10"></textarea>
+          <label for="giftWrapper">Gift wrapper</label>
+          <input type="file"
+        id="giftWrapper" name="giftWrapper"
+        accept="image/png, image/jpeg">
+        </form>
+      </section>
       <section class="thanks" id="thank you Page"><!-- Muestra la factura final con la compra de los cohetes-->
         <div class="end">
           <h2 >Your order is complete!</h2>
@@ -222,7 +244,6 @@
 
       </div>
     </div>
-      </section>
     </div>
     <footer><ul><li><p>The final frontier</p></li><li><img src="/images/instagram.png" width="16px" height="16px"> <img src="/images/twitter.png" width="16px" height="16px"> <img src="/images/youtube.png" width="16px" height="16px"></li><li><p>All rights reserved</p></li></ul></footer>
   </body>
