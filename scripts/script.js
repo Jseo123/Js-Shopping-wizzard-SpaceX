@@ -1,10 +1,12 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
 const cartBtn = document.querySelector(".addToCart");
+const toDelivery = document.querySelector(".todelivery")
 const removeOne = document.querySelector(".remove-one");
 const counter = document.querySelector(".counter");
 const spaceX = document.querySelector(".navlogo");
 const shopping = document.querySelector(".shopping");
+const closeModal = document.querySelector(".closemodal")
 const usernameToAdress = document.querySelector(".username-to-adress-button");
 const homepage = document.querySelector(".homepage");
 const product1 = document.querySelector(".main-carrusel");
@@ -13,6 +15,7 @@ const product3 = document.querySelector(".product3");
 const username = document.querySelector(".username");
 const adressSection = document.querySelector(".section3");
 const delivery = document.querySelector(".delivery");
+const container1 = document.querySelector(".container");
 const mainProductPress = mainProductbtn.addEventListener(
   "click",
   contentChange1
@@ -29,7 +32,25 @@ const changeSelection2 = document.querySelector(".selection2");
 const cartPress = cartBtn.addEventListener("click", addToCar);
 const remove = removeOne.addEventListener("click", oneLess);
 const shoppingPress = shopping.addEventListener("click", addSelection);
-const timeOutStarts = shopping.addEventListener("click", timeoutFunction)
+const timeOutStarts = shopping.addEventListener("click", timeoutFunction);
+const timeInterval = shopping.addEventListener("click", intervalFunction);
+const closeModalPress = closeModal.addEventListener("click", hideInterval)
+
+function hideInterval() {
+  container1.setAttribute("class", "hide-container");
+}
+
+function intervalFunction() {
+setInterval(() => {
+  container1.setAttribute("class", "modal-container container")
+}, 60000);
+
+setInterval(() => {
+  container1.setAttribute("class", "hide-container")
+}, 10000);
+}
+
+
 
 function timeoutFunction() {
   setTimeout(outOfTime,300000)
@@ -55,14 +76,21 @@ let price = {
   google: 2000,
   meta: 20,
 };
-
-let order = {
-  product: "",
-  productPrice: "",
-  sponsor: "",
-  sponsorPrice: "",
-  image: ""
+// var buyPhoto = document.getElementById("finalBuy");
+// buyPhoto.src = ImgFirst.src;
+function Order(product, priceProduct, sponsor, priceSponsor) {
+  this.product = product;
+  this.price = priceProduct;
+  this.sponsor = sponsor;
+  this.priceSponsor = priceSponsor;
 }
+var order = new Order("falcon9", 100000, "amazon", 8000, )
+
+document.querySelector(".despro1").innerHTML += order.product;
+document.querySelector(".despro2").innerHTML += order.sponsor;
+
+// document.querySelector() + " " + String(order.price) + " " + String(order.priceSponsor);
+
 
 function contentChange1() {
   product1.style.display = "flex";
@@ -71,9 +99,7 @@ function contentChange1() {
 }
 
 function backToHome() {
-  product1.style.display = "none";
-  username.style.display = "none";
-  homepage.style.display = "block";
+ window.location.reload(true);
   return;
 }
 
