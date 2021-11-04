@@ -51,7 +51,7 @@ const deliveryToThanksPress = deliveryToThanks.addEventListener(
 );
 
 function hideInterval() {
-  container1.setAttribute("class", "hide-container");
+  container1.setAttribute("class", "hide-container container");
 }
 
 function intervalFunction() {
@@ -60,8 +60,8 @@ function intervalFunction() {
   }, 60000);
 
   setInterval(() => {
-    container1.setAttribute("class", "hide-container");
-  }, 10000);
+    container1.setAttribute("class", "hide-container container");
+  }, 5000);
 }
 
 function timeoutFunction() {
