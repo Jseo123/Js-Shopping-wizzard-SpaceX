@@ -141,7 +141,8 @@ footer {
   bottom: 0%;
   width: 100%;
   margin-top: 10%;
-  background-color: rgba(0, 0, 0, 0.822);
+  background-color: #06173b;
+  border-top: #00267a solid 3px;
 position: fixed;
 }
 
@@ -166,6 +167,16 @@ footer ul li p {
 
 .counter {
   color: #ddd;
+}
+
+.ImgFirst {
+  max-width: 100%;
+  height: auto;
+  border-bottom: #21416e solid 3px;
+  border-radius: 30px;
+  box-shadow: rgb(0 0 0) 0px 6px 17px 0px;
+  filter: drop-shadow(8px 8px 10px black);
+  
 }
 
 .adress {
