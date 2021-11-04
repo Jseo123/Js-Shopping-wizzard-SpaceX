@@ -71,9 +71,7 @@ function contentChange1() {
 }
 
 function backToHome() {
-  product1.style.display = "none";
-  username.style.display = "none";
-  homepage.style.display = "block";
+ window.location.reload(true);
   return;
 }
 
