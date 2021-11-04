@@ -256,18 +256,13 @@ footer ul li p {
   align-items: center;
 }
 
-.container1 {
-  display: none;
+.closemodal {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  height: 50%;
 }
 
-.container2 {
-  display: none;
-}
-
-.container3 {
-  display: none;
-}
-
-.container4 {
+.hide-container {
   display: none;
 }
