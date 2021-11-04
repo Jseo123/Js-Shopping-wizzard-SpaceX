@@ -17,6 +17,7 @@ const mainProductPress = mainProductbtn.addEventListener(
   "click",
   contentChange1
 );
+const usernameToAdressPress = usernameToAdress.addEventListener("click", changeToAdress)
 const spaceXclick = spaceX.addEventListener("click", backToHome);
 var ImgFirst = document.querySelector(".ImgFirst");
 var minitureImg = document.querySelector(".mySlides");
@@ -28,7 +29,14 @@ const changeSelection2 = document.querySelector(".selection2");
 const cartPress = cartBtn.addEventListener("click", addToCar);
 const remove = removeOne.addEventListener("click", oneLess);
 const shoppingPress = shopping.addEventListener("click", addSelection);
+const timeOutStarts = shopping.addEventListener("click", timeoutFunction)
 
+function timeoutFunction() {
+  setTimeout(outOfTime,300000)
+function  outOfTime() {
+  window.location.reload(true);
+}
+}
 
 let currentRocket = null;
 
@@ -145,14 +153,22 @@ function oneLess() {
 function addSelection() {
   if (currentRocket != null) {
     let array = currentRocket.split("-")
-    order.product = array[0];
-    order.productPrice = price[array[0]];
-    sponsor.product = array[1];
-    order.sponsorPrice = price[array[1]];
-    image = order.product + order.sponsor;
-    console.log(order);
+   // order.product = array[0];
+   // order.productPrice = price[array[0]];
+   // sponsor.product = array[1];
+   // order.sponsorPrice = price[array[1]];
+   // image = order.product + order.sponsor;
+    //console.log(order);
+    homepage.style.display = "none";
     product1.style.display = "none";
   username.style.display = "block";
   return;
   }
 }
+
+function changeToAdress() {
+  homepage.style.display="none";
+  username.style.display="none";
+  adressSection.style.display="flex";
+  return;
+  }
