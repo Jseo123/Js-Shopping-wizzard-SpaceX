@@ -24,6 +24,9 @@ const priceFinal = document.querySelector(".price0");
 const priceFinal1 = document.querySelector(".price1");
 const priceFinal2 = document.querySelector(".price2");
 const priceFinal3 = document.querySelector(".price3");
+// const priceFinal1 = document.querySelector(".price01");
+// const priceFinal21 = document.querySelector(".price21");
+// const priceFinal31 = document.querySelector(".price31");
 const deliveryToFinishPress = deliveryToFinish.addEventListener(
   "click",
   changeToFinish
@@ -114,8 +117,8 @@ var order = new Order("falcon9", 100000, "amazon", 8000);
 
 document.querySelector(".despro1").innerHTML += order.product;
 document.querySelector(".despro2").innerHTML += order.sponsor;
-
-// document.querySelector() + " " + String(order.price) + " " + String(order.priceSponsor);
+document.querySelector(".despro1-1").innerHTML += order.product;
+document.querySelector(".despro2-2").innerHTML += order.sponsor;
 
 function contentChange1() {
   product1.style.display = "flex";
@@ -198,11 +201,15 @@ function changeImg4(e) {
 
 function addSelection() {
   document.getElementById("finalBuy").src = ImgFirst.src;
+  document.getElementById("finalBuy2").src = ImgFirst.src;
   if (currentRocket != null) {
     let array = currentRocket.split("-");
     priceFinal.innerHTML += " " + String(price[array[0]]) + "€";
     priceFinal2.innerHTML += " " + 2000 + "€";
     priceFinal3.innerHTML += " " + String(price[array[0]] + 2000) + "€";
+    // priceFinal1.innerHTML += " " + String(price[array[0]]) + "€";
+    // priceFinal21.innerHTML += " " + 2000 + "€";
+    // priceFinal31.innerHTML += " " + String(price[array[0]] + 2000) + "€";
     homepage.style.display = "none";
     product1.style.display = "none";
     username.style.display = "block";
