@@ -78,10 +78,10 @@ function validateAddress() {
   if (lastName.match(onlyLetters) == null) {
     errors.lastName.push("Last Name can only contain letters");
   }
-  if (address1.length > 50) {
+  if (address1.length > 50 && address1.length < 1) {
     errors.address1.push("The address should have less than 50 characters");
   }
-  if (address2.length < 50) {
+  if (address2.length > 50) {
     errors.address2.push("The address should have less than 50 characters");
   }
   if (postalCode.match(onlyNumbers) == null) {

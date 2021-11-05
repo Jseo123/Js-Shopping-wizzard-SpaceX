@@ -2,7 +2,7 @@ import { validateProfile, validateAddress } from "./validation.js";
 
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
-const giftBtn = document.querySelector(".estimation")
+const giftBtn = document.querySelector(".estimation");
 // const cartBtn = document.querySelector(".addToCart");
 const deliveryToFinish = document.querySelector(".finishbtn");
 const toDelivery = document.querySelector(".todelivery");
@@ -23,7 +23,7 @@ const adressSection = document.querySelector(".section3");
 const delivery = document.querySelector(".deliverypage");
 const container1 = document.querySelector(".container");
 const thankYouSection = document.querySelector(".thanks");
-const giftElement = document.querySelector(".ffship")
+const giftElement = document.querySelector(".ffship");
 const priceFinal = document.querySelector(".price0");
 const priceFinal1 = document.querySelector(".price1");
 const priceFinal2 = document.querySelector(".price2");
@@ -31,7 +31,7 @@ const priceFinal3 = document.querySelector(".price3");
 // const priceFinal1 = document.querySelector(".price01");
 // const priceFinal21 = document.querySelector(".price21");
 // const priceFinal31 = document.querySelector(".price31");
-const giftBtnPress =giftBtn.addEventListener("click", tooglingGift)
+const giftBtnPress = giftBtn.addEventListener("click", tooglingGift);
 const deliveryToFinishPress = deliveryToFinish.addEventListener(
   "click",
   changeToFinish
@@ -73,8 +73,6 @@ function intervalFunction() {
     container1.setAttribute("class", "modal-container container");
   }, 60000);
 }
-
-
 
 function timeoutFunction() {
   setTimeout(outOfTime, 300000);
@@ -272,8 +270,10 @@ function changeToAdress() {
 }
 
 function adressToDelivery() {
-  adressSection.style.display = "none";
-  delivery.style.display = "block";
+  if (processAddress()) {
+    adressSection.style.display = "none";
+    delivery.style.display = "block";
+  }
 }
 
 function changToThanks() {
@@ -288,8 +288,8 @@ function changeToFinish() {
   finishSection.style.display = "block";
 }
 
-function tooglingGift(){
-giftElement.style.display = "block"
+function tooglingGift() {
+  giftElement.style.display = "block";
 }
 
 //Validation
@@ -352,7 +352,17 @@ function processProfile() {
   // });
 }
 
-function processAddress(params) {}
+function processAddress() {
+  let fixes = validateAddress();
+  for (const iterator in fixes) {
+    console.log(iterator);
+    if (fixes[iterator].length >= 1) {
+      console.log(iterator);
+      return false;
+    }
+  }
+  return true;
+}
 
 function processFinal() {
   var checkBox = document.getElementById("agree");
