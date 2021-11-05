@@ -1,5 +1,6 @@
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
+const giftBtn = document.querySelector(".estimation")
 // const cartBtn = document.querySelector(".addToCart");
 const deliveryToFinish = document.querySelector(".finishbtn");
 const toDelivery = document.querySelector(".todelivery");
@@ -20,10 +21,12 @@ const adressSection = document.querySelector(".section3");
 const delivery = document.querySelector(".deliverypage");
 const container1 = document.querySelector(".container");
 const thankYouSection = document.querySelector(".thanks");
+const giftElement = document.querySelector(".ffship")
 const priceFinal = document.querySelector(".price0");
 const priceFinal1 = document.querySelector(".price1");
 const priceFinal2 = document.querySelector(".price2");
 const priceFinal3 = document.querySelector(".price3");
+const giftBtnPress =giftBtn.addEventListener("click", tooglingGift)
 const deliveryToFinishPress = deliveryToFinish.addEventListener(
   "click",
   changeToFinish
@@ -64,11 +67,9 @@ function intervalFunction() {
   setInterval(() => {
     container1.setAttribute("class", "modal-container container");
   }, 60000);
-
-  setInterval(() => {
-    container1.setAttribute("class", "hide-container container");
-  }, 5000);
 }
+
+
 
 function timeoutFunction() {
   setTimeout(outOfTime, 300000);
@@ -273,6 +274,10 @@ function changToThanks() {
 function changeToFinish() {
   delivery.style.display = "none";
   finishSection.style.display = "block";
+}
+
+function tooglingGift(){
+giftElement.style.display = "block"
 }
 
 //Validation

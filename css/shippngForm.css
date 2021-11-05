@@ -39,6 +39,13 @@ input{
   padding: 1px 0px 25px;
 }
 .ffship{
+  display: none;
+  font-size: 100%;
+  padding-bottom: 10%;
+}
+
+.gifting {
+  display: block;
   font-size: 100%;
   padding-bottom: 10%;
 }
