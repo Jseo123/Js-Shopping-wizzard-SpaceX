@@ -1,3 +1,5 @@
+import { validateProfile, validateAddress } from "./validation.js";
+
 const mainProductbtn = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
 const giftBtn = document.querySelector(".estimation")
@@ -260,9 +262,12 @@ function shippingDate(e) {
 }
 
 function changeToAdress() {
-  homepage.style.display = "none";
-  username.style.display = "none";
-  adressSection.style.display = "flex";
+  if (processProfile()) {
+    homepage.style.display = "none";
+    username.style.display = "none";
+    adressSection.style.display = "flex";
+  }
+
   return;
 }
 
@@ -289,7 +294,63 @@ giftElement.style.display = "block"
 
 //Validation
 
-function processProfile(params) {}
+function processProfile() {
+  let fixes = validateProfile();
+  let correct = true;
+  console.log(fixes);
+  //first remove all previous messages
+  let pElements = document.getElementsByClassName("pError");
+  console.log(pElements);
+  for (let index = 0; index < pElements.length; index++) {
+    pElements[index].parentNode.removeChild(pElements[index]);
+  }
+  //for (const key in fixes) {
+  //  key.forEach((element) => {
+  //    console.log(key + "-" + element);
+  //  });
+  if (fixes.userName.length > 0) {
+    let input = document.querySelector("#userName");
+    input.setAttribute("class", "validationError");
+    let newElement = document.createElement("P");
+    newElement.setAttribute("class", "pError");
+    newElement.innerHTML = fixes.userName[0];
+    input.parentNode.insertBefore(newElement, input.nextSibling);
+    correct = false;
+  }
+  if (fixes.email.length > 0) {
+    let input = document.querySelector("#email");
+    input.setAttribute("class", "validationError");
+    correct = false;
+  }
+  if (fixes.password.length > 0) {
+    let input = document.querySelector("#password");
+    input.setAttribute("class", "validationError");
+    let newElement = document.createElement("P");
+    newElement.setAttribute("class", "pError");
+    newElement.innerHTML = fixes.password[0];
+    if (fixes.password.length > 1) {
+      newElement.innerHTML += fixes.password[1];
+    }
+    input.parentNode.insertBefore(newElement, input.nextSibling);
+    correct = false;
+  }
+  if (fixes.repeatPassword.length > 0) {
+    let input = document.querySelector("#repeatPassword");
+    input.setAttribute("class", "validationError");
+    let newElement = document.createElement("P");
+    newElement.setAttribute("class", "pError");
+    newElement.innerHTML = fixes.repeatPassword[0];
+    input.parentNode.insertBefore(newElement, input.nextSibling);
+    correct = false;
+  }
+
+  return correct;
+  //fixes.userName.forEach((element) => {
+  //  let input = document.querySelector("#userName");
+  //  input.toggleAttribute("class", ".validationError");
+  //console.log(element);
+  // });
+}
 
 function processAddress(params) {}
 
