@@ -323,7 +323,26 @@ font-size: 18px;
 }
 .titlePurch {
   text-align: center;
-  
+}
+.rowDown{
+  background-color: rgba(65, 63, 63, 0.37);
+  position:fixed;
+  margin-top: 25%;
+  text-align: center;
+  padding: 60px;
+}
+#conditions{
+  font-size: 15px;
+}
+.thankstobtn{
+  background-color: #ffffff;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 20px 0px;
+  width: 50%;
+  text-decoration: none;
+  margin: 20px 0px;
+  cursor: pointer;
 }
 .finish{
   display: none;
